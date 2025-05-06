@@ -1,10 +1,13 @@
 const express = require("express");
+const cors = require("cors")
 const sequelize = require('./config/dbConfig');
 const Usuario = require('./models/Usuario');
 const AuthRoutes = require('./Routes/AuthRoutes');
 const UsuariosRoutes = require("./Routes/UsuariosRoutes");
 
 const app = express();
+
+app.use(cors());
 
 sequelize.sync().then(
     () => {
