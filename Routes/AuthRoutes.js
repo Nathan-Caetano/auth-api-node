@@ -4,7 +4,7 @@ const authController = require('../controllers/authController')
 const routes = (app) => {
     app.use(express.json())
 
-    app.get('/login/:email/:senha', authController.logar)
+    app.post('/login', authController.logar)
 }
 
 module.exports = {

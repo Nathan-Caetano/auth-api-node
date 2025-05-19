@@ -1,7 +1,7 @@
 const Usuario = require('../models/Usuario')
 
 const logar = async (req, res) => {
-    const { email, senha } = req.params;
+    const { email, senha } = req.body;
     console.log("Recebido:", { email, senha });
 
     try {
